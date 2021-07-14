@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, withRouter } from "react-router-dom";
 
 function Navigation(props) {
@@ -22,12 +22,12 @@ function Navigation(props) {
                             <li class={`nav-item  ${
                                 props.location.pathname === "/closet" ? "active" : ""
                             }`}>
-                                <a class="nav-link" href="#">View My Closet</a>
+                                <a class="nav-link" href="/closet">View My Closet</a>
                             </li>
                             <li class={`nav-item  ${
                                 props.location.pathname === "/new-outfit" ? "active" : ""
                             }`}>
-                                <a class="nav-link" href="#">Add New Outfit</a>
+                                <a class="nav-link" href="/new-outfit">Add New Outfit</a>
                             </li>
                         </ul>
                         <span class="navbar-text">
