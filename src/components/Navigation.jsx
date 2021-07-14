@@ -9,28 +9,31 @@ function Navigation(props) {
 
     return (
         <div className="navigation">
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand">Outfitter</a>
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class={`nav-item  ${
-                                props.location.pathname === "/" ? "active" : ""
-                            }`}>
-                                <a class="nav-link " aria-current="page" href="/">Home</a>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container-fluid">
+                    <a className="navbar-brand">Outfitter</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/">
+                                    Home
+                                </Link>
                             </li>
-                            <li class={`nav-item  ${
-                                props.location.pathname === "/closet" ? "active" : ""
-                            }`}>
-                                <a class="nav-link" href="/closet">View My Closet</a>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/closet">
+                                    My Closet
+                                </Link>
                             </li>
-                            <li class={`nav-item  ${
-                                props.location.pathname === "/new-outfit" ? "active" : ""
-                            }`}>
-                                <a class="nav-link" href="/new-outfit">Add New Outfit</a>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/new-outfit">
+                                    Create New Outfit
+                                </Link>
                             </li>
                         </ul>
-                        <span class="navbar-text">
+                        <span className="navbar-text">
                             username_here
                         </span>
                     </div>
