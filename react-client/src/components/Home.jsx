@@ -1,4 +1,5 @@
 import React from "react";
+import ExploreItem from "./ExploreItem";
 
 function Home(props) {
   return (
@@ -6,46 +7,21 @@ function Home(props) {
       <div className="row">
         <div className="col" id="header">
             <h1 className="text-center">Organize your closet. Digitally.</h1>
-            {!props.data ? "Loading..." : props.data}
         </div>
       </div>
       <div className="row">
         <h2>Explore</h2>
-      <div className="col">
-        <div className="card">
-          <img src="/img/henley.png" class="card-img-top" alt=""/>
-          <div className="card-body">
-            <p className="card-text"><a href="">summergurl</a></p>
-            <button type="button" class="btn btn-secondary btn-sm">American Eagle</button>
-          </div>
-        </div>
+        <ExploreItem username="summergurl" imgUrl="img/henley.png" />
+        <ExploreItem username="momof4" imgUrl="img/one-piece.png" />
+        <ExploreItem username="owl_city" imgUrl="img/red-tank.png" />
+        <ExploreItem username="hannah241" imgUrl="img/leggings.png" />
       </div>
-      <div className="col">
-        <div className="card">
-          <img src="/img/sweaters.jpg"class="card-img-top" alt=""/>
-          <div className="card-body">
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div className="col">
-        <div className="card">
-          <img src="/img/red-tank.png" class="card-img-top" alt=""/>
-          <div className="card-body">
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div className="col">
-        <div className="card">
-          <img src="/img/one-piece.png" class="card-img-top" alt=""/>
-          <div className="card-body">
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
+      <div className="row mt-4">
+        <ExploreItem username="thrifter22" imgUrl="img/dress.png" />
+        <ExploreItem username="worldtraveler" imgUrl="img/align-tshirt.png" />
+        <ExploreItem username="livelaughlove" imgUrl="img/backpack.png" />
       </div>
     </div>
-  </div>
   );
 }
 
