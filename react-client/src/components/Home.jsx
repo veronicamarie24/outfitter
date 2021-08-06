@@ -1,19 +1,19 @@
 import React from "react";
-import IMAGES from "../images"
 
-function Home() {
+function Home(props) {
   return (
     <div className="container pb-4">
       <div className="row">
         <div className="col" id="header">
             <h1 className="text-center">Organize your closet. Digitally.</h1>
+            {!props.data ? "Loading..." : props.data}
         </div>
       </div>
       <div className="row">
         <h2>Explore</h2>
       <div className="col">
         <div className="card">
-          <img src={ IMAGES.henley } class="card-img-top" alt=""/>
+          <img src="/img/henley.png" class="card-img-top" alt=""/>
           <div className="card-body">
             <p className="card-text"><a href="">summergurl</a></p>
             <button type="button" class="btn btn-secondary btn-sm">American Eagle</button>
@@ -22,7 +22,7 @@ function Home() {
       </div>
       <div className="col">
         <div className="card">
-          <img src={ IMAGES.shorts } class="card-img-top" alt=""/>
+          <img src="/img/sweaters.jpg"class="card-img-top" alt=""/>
           <div className="card-body">
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
@@ -30,7 +30,7 @@ function Home() {
       </div>
       <div className="col">
         <div className="card">
-          <img src={ IMAGES.onePiece } class="card-img-top" alt=""/>
+          <img src="/img/red-tank.png" class="card-img-top" alt=""/>
           <div className="card-body">
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
@@ -38,7 +38,7 @@ function Home() {
       </div>
       <div className="col">
         <div className="card">
-          <img src={ IMAGES.redTank } class="card-img-top" alt=""/>
+          <img src="/img/one-piece.png" class="card-img-top" alt=""/>
           <div className="card-body">
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>

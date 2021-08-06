@@ -1,26 +1,23 @@
 {
-  "name": "outfitter",
+  "name": "node-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Outfitter web app backend.",
   "main": "index.js",
   "scripts": {
-    "start": "node node-server/index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/veronicamarie24/outfitter.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Veronica Valenzuela",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/veronicamarie24/outfitter/issues"
   },
   "homepage": "https://github.com/veronicamarie24/outfitter#readme",
   "dependencies": {
-    "custom-env": "^2.0.1",
-    "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "express": "^4.17.1"
   }
 }

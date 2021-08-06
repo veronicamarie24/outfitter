@@ -1,5 +1,4 @@
 import React from "react";
-import IMAGES from "../images"
 
 function ClosetList() {
   return (
@@ -7,7 +6,7 @@ function ClosetList() {
       <div className="row mt-3">
         <div className="col">
           <div className="card text-black">
-            <img src={ IMAGES.henley } className="card-img" alt="" />
+            <img src="/img/henley.png" className="card-img" alt="" />
             <div className="card-img-overlay">
               <p className="card-text closet-tag-buttons">
                 <button type="button" className="btn btn-secondary btn-sm">American Eagle</button>
@@ -17,7 +16,7 @@ function ClosetList() {
         </div>
         <div className="col">
         <div className="card text-black">
-          <img src={ IMAGES.shorts } className="card-img" alt="" />
+          <img src="/img/jeans.jpg" className="card-img" alt="" />
           <div className="card-img-overlay">
             <p className="card-text closet-tag-buttons">
               <button type="button" className="btn btn-secondary btn-sm">Loungewear</button>
@@ -27,7 +26,7 @@ function ClosetList() {
         </div>
         <div className="col">
           <div className="card text-black">
-            <img src={ IMAGES.onePiece } class="card-img" alt="" />
+            <img src="/img/red-tank.png" class="card-img" alt="" />
             <div className="card-img-overlay">
               <p className="card-text closet-tag-buttons">
                 <button type="button" className="mr-1 btn btn-secondary btn-sm me-1">Abercrombie</button>
@@ -38,7 +37,7 @@ function ClosetList() {
         </div>
         <div className="col">
           <div className="card text-black">
-            <img src={ IMAGES.sweaters } class="card-img" alt="" />
+            <img src="/img/one-piece.png" class="card-img" alt="" />
             <div className="card-img-overlay">
               <p className="card-text closet-tag-buttons">
                 <button type="button" className="btn btn-secondary btn-sm me-1">Neutrals</button>
