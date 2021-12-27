@@ -10,7 +10,7 @@ function Home(props) {
         </div>
       </div>
       <div className="row">
-        <h2>Explore</h2>
+        <h2 className="mb-4">Explore</h2>
         <ExploreItem username="summergurl" imgUrl="img/henley.png" />
         <ExploreItem username="momof4" imgUrl="img/one-piece.png" />
         <ExploreItem username="owl_city" imgUrl="img/red-tank.png" />

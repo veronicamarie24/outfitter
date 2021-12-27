@@ -4,7 +4,7 @@ import ClosetList from "./ClosetList";
 
 function Closet() {
   return (
-    <div>
+    <div className="mt-4">
       <HeaderSearch title="My Closet" />
       <ClosetList />
     </div>

@@ -16,8 +16,8 @@ function App() {
       <Router>
         <Navigation />
         <Switch>
-          <Route path="/" exact component={() => <Home data={ data } />} />
-          <Route path="/closet" exact component={() => <Closet />} />
+          <Route path="/" exact component={() => <Home data={data} />} />
+          <Route path="/closet" component={Closet} />
         </Switch>
       </Router>
     </div>
