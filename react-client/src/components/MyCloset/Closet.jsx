@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderSearch from "./HeaderSearch";
+import HeaderSearch from "../common/HeaderSearch";
 import ClosetList from "./ClosetList";
 
 function Closet() {

@@ -16,7 +16,7 @@ function ClosetList() {
         </div>
         <div className="col">
         <div className="card text-black">
-          <img src="/img/jeans.jpg" className="card-img" alt="" />
+          <img src="/img/leggings.png" className="card-img" alt="" />
           <div className="card-img-overlay">
             <p className="card-text closet-tag-buttons">
               <button type="button" className="btn btn-secondary btn-sm">Loungewear</button>
