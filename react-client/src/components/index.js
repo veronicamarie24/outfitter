@@ -1,3 +1,3 @@
-export { default as Navigation } from "./common/Navigation";
-export { default as Home } from "./Home/Home";
-export { default as Closet } from "./MyCloset/Closet";
+export { Home } from "./Home/Home";
+export { Navigation } from "./common/Navigation";
+export { Closet } from "./MyCloset/Closet";

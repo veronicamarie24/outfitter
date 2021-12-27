@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navigation />
+        <Navigation username="username_here" />
         <Switch>
           <Route path="/" exact component={() => <Home data={data} />} />
           <Route path="/closet" component={Closet} />

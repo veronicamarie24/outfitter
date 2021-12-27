@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import { RouteComponentProps } from "react-router";
 import { Link, useLocation, withRouter } from "react-router-dom";
 
-function Navigation(props) {
+interface NavigationProps extends RouteComponentProps {
+    username: string
+}
+  
+export const Navigation = ({ username }: NavigationProps) => {
     /* TODO: change isAuthenticated state change into a more elaborate cookies method
             so that the user doesn't get logged out when they refresh */
     const [isAuthenticated, setAuthentication] = useState(false);
@@ -34,7 +39,7 @@ function Navigation(props) {
                             </li>
                         </ul>
                         <span className="navbar-text">
-                            username_here
+                            {username}
                         </span>
                     </div>
                 </div>
@@ -42,5 +47,3 @@ function Navigation(props) {
         </div>
     );
 }
-
-export default withRouter(Navigation);
