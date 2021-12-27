@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Home, Closet } from "./components";
+import { Closet, Home, Navigation} from "./components";
 
 function App() {
   const [data, setData] = React.useState(null);
