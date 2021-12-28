@@ -1,68 +1,62 @@
-// Created using this tutorial https://www.toptal.com/react/webpack-react-tutorial-pt-1
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require("webpack");
+// Created using this tutorial https://www.freecodecamp.org/news/learn-webpack-for-react-a36d4cac5060/
+// Typescript implementation using this documentation https://webpack.js.org/guides/typescript/
+const webpack = require('webpack');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-module.exports = function(_env, argv) {
-  const isProduction = argv.mode === "production";
-  const isDevelopment = !isProduction;
+const port = process.env.PORT || 2424;
+const path = require('path');
+const htmlPlugin = new HtmlWebPackPlugin({
+  template: "./src/index.html", 
+  filename: "./index.html"
+});
 
-  return {
-    devtool: isDevelopment && "cheap-module-source-map",
-    entry: "./src/index.js",
-    output: {
-      path: path.resolve(__dirname, "dist"),
-      filename: "assets/js/[name].[contenthash:8].js",
-      publicPath: "/"
-    },
-    module: {
-      rules: [
-        {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          use: {
-            loader: "babel-loader",
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: "[name].js"
+  },
+  devtool: 'inline-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
             options: {
-              cacheDirectory: true,
-              cacheCompression: false,
-              envName: isProduction ? "production" : "development"
+              modules: true,
+              localsConvention: 'camelCase',
+              sourceMap: true
             }
           }
-        },
-        {
-          test: /\.css$/,
-          use: [
-            isProduction ? MiniCssExtractPlugin.loader : "style-loader",
-            "css-loader"
-          ]
-        },
-        {
-          test: /\.(eot|otf|ttf|woff|woff2)$/,
-          loader: require.resolve("file-loader"),
-          options: {
-            name: "static/media/[name].[hash:8].[ext]"
-          }
-        },
-        new webpack.DefinePlugin({
-          "process.env.NODE_ENV": JSON.stringify(
-            isProduction ? "production" : "development"
-          )
-        }),
-        {
-          devServer: {
-            compress: true,
-            historyApiFallback: true,
-            open: true,
-            overlay: true,
-            proxy: {
-              '/api': 'http://localhost:2424',
-            },
-           }
-        }
-      ]
-    },
-    resolve: {
-      extensions: [".js", ".jsx", ".ts"]
-    }
-  };
+        ]
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  devServer: {
+    host: 'localhost',
+    port: port,
+    historyApiFallback: true,
+    open: true
+  }
 };
