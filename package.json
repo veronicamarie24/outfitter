@@ -1,0 +1,35 @@
+{
+  "name": "outfitter",
+  "version": "1.0.0",
+  "description": "## Install and Run 1. Clone this repository 2. Run yarn install in `node-server`, and `react-client` to install dependencies 3. Run yarn dev in `react-client` which will start the server on `localhost:2424`",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && webpack --mode development",
+    "start": "node ./dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veronicamarie24/outfitter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veronicamarie24/outfitter/issues"
+  },
+  "homepage": "https://github.com/veronicamarie24/outfitter#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "babel-loader": "^8.2.3",
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
